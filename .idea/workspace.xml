@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="54debe34-9300-4b4e-b6b9-f3cbc4adf9bb" name="Changes" comment="Initial Project Structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/account/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/account/CurrentAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/account/CurrentAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/account/SavingAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/account/SavingAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/app/BankApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/app/BankApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

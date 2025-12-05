@@ -26,6 +26,15 @@ public class BankApp {
         System.out.println(" Enter your Choice");
     }
 
+    private Account findAccount(int accountNumber){
+        for (int i = 0; i < accounts.size(); i++){
+            if(accountNumber == accounts.get(i).getAccountNumber(){
+                return accounts.get(i);
+            }
+        }
+        return null;
+    }
+
     private void createAccount(){
         System.out.println("Types of Account");
         System.out.println("1. Saving");
@@ -68,6 +77,18 @@ public class BankApp {
     }
 
     private void depositAmount(){
+        System.out.println("Enter Account Number");
+        int accountNumber = input.nextInt();
+        Account account = findAccount(accountNumber);
+        if (account == null) {
+            System.out.println("Account not found!");
+            return;
+        }
+
+        System.out.println("Enter the amount : ");
+        double amount = input.nextDouble();;
+        account.deposit(amount);
+        System.out.println("Deposite Successful");
 
     }
 
