@@ -17,13 +17,13 @@ public class BankApp {
     }
 
     private void printMenu(){
-        System.out.println("\n--- Bank Menu ---");
-        System.out.println("1. Create Account");
-        System.out.println("2. Deposit");
-        System.out.println("3. Withdraw");
-        System.out.println("4. Print Account Details");;
-        System.out.println("5. Exit");
-        System.out.println(" Enter your Choice");
+        System.out.print("\n--- Bank Menu ---");
+        System.out.print("1. Create Account");
+        System.out.print("2. Deposit");
+        System.out.print("3. Withdraw");
+        System.out.print("4. Print Account Details");;
+        System.out.print("5. Exit");
+        System.out.print(" Enter your Choice : ");
     }
 
     private Account findAccount(int accountNumber){
@@ -36,20 +36,20 @@ public class BankApp {
     }
 
     private void createAccount(){
-        System.out.println("Types of Account");
-        System.out.println("1. Saving");
-        System.out.println("2. Current");
-        System.out.println("Enter Choice : ");
+        System.out.print("Types of Account");
+        System.out.print("1. Saving");
+        System.out.print("2. Current");
+        System.out.print("Enter Choice : ");
 
         int type = input.nextInt();
         switch (type){
             case 1->{
-                System.out.println("Enter Account Number : ");
+                System.out.print("Enter Account Number : ");
                 int accountNumber = input.nextInt();
                 input.nextLine();
-                System.out.println("Enter Account Holder Name : ");
+                System.out.print("Enter Account Holder Name : ");
                 String name = input.nextLine();
-                System.out.println("Enter Balance :");
+                System.out.print("Enter Balance :");
                 double balance = input.nextDouble();
 
                 SavingAccount newAccount = new SavingAccount(accountNumber, name, balance);
@@ -58,14 +58,14 @@ public class BankApp {
                 System.out.println("Saving Account Successfully Created");
             }
             case 2->{
-                System.out.println("Enter Account Number : ");
+                System.out.print("Enter Account Number : ");
                 int accountNumber = input.nextInt();
                 input.nextLine();
-                System.out.println("Enter Account Holder Name : ");
+                System.out.print("Enter Account Holder Name : ");
                 String name = input.nextLine();
-                System.out.println("Enter Balance");
+                System.out.print("Enter Balance");
                 double balance = input.nextDouble();
-                System.out.println("Enter Overdraft Limit : ");
+                System.out.print("Enter Overdraft Limit : ");
                 double limit = input.nextDouble();
                 CurrentAccount newAccount = new CurrentAccount(accountNumber, name, balance, limit);
                 accounts.add(newAccount);
@@ -77,18 +77,18 @@ public class BankApp {
     }
 
     private void depositAmount(){
-        System.out.println("Enter Account Number");
+        System.out.print("Enter Account Number");
         int accountNumber = input.nextInt();
         Account account = findAccount(accountNumber);
         if (account == null) {
-            System.out.println("Account not found!");
+            System.out.print("Account not found!");
             return;
         }
 
-        System.out.println("Enter the amount : ");
+        System.out.print("Enter the amount : ");
         double amount = input.nextDouble();;
         account.deposit(amount);
-        System.out.println("Deposit Successful");
+        System.out.print("Deposit Successful");
 
     }
 
