@@ -5,7 +5,7 @@ import com.bank.interfaces.Printable;
 public class SavingAccount extends Account implements Printable {
 
 
-    SavingAccount(int accountNumber, String accountHolderName, double balance) {
+    public SavingAccount(int accountNumber, String accountHolderName, double balance) {
         super(accountNumber, accountHolderName, balance);
     }
 

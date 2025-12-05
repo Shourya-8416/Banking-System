@@ -5,7 +5,7 @@ import com.bank.interfaces.Printable;
 public class CurrentAccount extends Account implements Printable {
     private final double overdraftLimit;
 
-    CurrentAccount(int accountNumber, String accountHolderName, double balance, double overdraftLimit){
+    public CurrentAccount(int accountNumber, String accountHolderName, double balance, double overdraftLimit){
         super(accountNumber, accountHolderName, balance);
         this.overdraftLimit = overdraftLimit;
     }

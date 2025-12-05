@@ -1,8 +1,8 @@
 package com.bank.account;
 
-abstract class Account {
-    private int accountNumber;
-    private String accountHolderName;
+public abstract class Account {
+    private final int accountNumber;
+    private final String accountHolderName;
     private double balance;
 
     //Parameterized Constructor
