@@ -88,7 +88,7 @@ public class BankApp {
         System.out.println("Enter the amount : ");
         double amount = input.nextDouble();;
         account.deposit(amount);
-        System.out.println("Deposite Successful");
+        System.out.println("Deposit Successful");
 
     }
 
