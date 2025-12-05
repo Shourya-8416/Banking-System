@@ -10,7 +10,7 @@ public class SavingAccount extends Account implements Printable {
     }
 
     @Override
-    void withdraw(double amount) {
+    public void withdraw(double amount) {
         double currentBalance = getBalance();
         if(amount <= currentBalance){
             double updatedBalance = currentBalance - amount;

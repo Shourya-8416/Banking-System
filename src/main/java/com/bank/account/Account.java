@@ -1,6 +1,8 @@
 package com.bank.account;
 
-public abstract class Account {
+import com.bank.interfaces.Printable;
+
+public abstract class Account implements Printable {
     private final int accountNumber;
     private final String accountHolderName;
     private double balance;
@@ -28,7 +30,7 @@ public abstract class Account {
         balance+=amount;
     }
 
-     abstract void withdraw(double amount);
+     public abstract void withdraw(double amount);
 
     protected void updateBalance(double newBalance){
         this.balance = newBalance;

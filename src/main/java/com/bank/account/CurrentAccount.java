@@ -11,7 +11,7 @@ public class CurrentAccount extends Account implements Printable {
     }
 
     @Override
-    void withdraw(double amount) {
+    public void withdraw(double amount) {
         double currentBalance = getBalance();
         double maximumAllowed = currentBalance+overdraftLimit;
         if(amount <= maximumAllowed){

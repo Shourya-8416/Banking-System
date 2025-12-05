@@ -28,7 +28,7 @@ public class BankApp {
 
     private Account findAccount(int accountNumber){
         for (int i = 0; i < accounts.size(); i++){
-            if(accountNumber == accounts.get(i).getAccountNumber(){
+            if(accountNumber == accounts.get(i).getAccountNumber()){
                 return accounts.get(i);
             }
         }
@@ -93,11 +93,29 @@ public class BankApp {
     }
 
     private void withdrawAmount(){
+        System.out.println("Enter Account Number");
+        int accountNumber = input.nextInt();
+        Account account = findAccount(accountNumber);
+        if (account == null) {
+            System.out.println("Account not found!");
+            return;
+        }
 
+        System.out.println("Enter the amount : ");
+        double amount = input.nextDouble();;
+        account.withdraw(amount);
     }
 
     private void printAccountDetails(){
+        System.out.println("Enter Account Number : ");
+        int number = input.nextInt();
+        Account account = findAccount(number);
+        if(account == null){
+            System.out.println("No Account Found, Wrong Account Number");
+            return;
+        }
 
+        account.printDetails();
     }
 
     private void start(){
