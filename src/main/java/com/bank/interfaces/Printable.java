@@ -1,4 +1,5 @@
 package com.bank.interfaces;
 
-public class Printable {
+public interface Printable {
+    void printDetails();
 }

@@ -1,7 +1,9 @@
 package com.bank.account;
 
-public class CurrentAccount extends Account {
-    private double overdraftLimit;
+import com.bank.interfaces.Printable;
+
+public class CurrentAccount extends Account implements Printable {
+    private final double overdraftLimit;
 
     CurrentAccount(int accountNumber, String accountHolderName, double balance, double overdraftLimit){
         super(accountNumber, accountHolderName, balance);
@@ -13,11 +15,20 @@ public class CurrentAccount extends Account {
         double currentBalance = getBalance();
         double maximumAllowed = currentBalance+overdraftLimit;
         if(amount <= maximumAllowed){
-            double updatedBalance = maximumAllowed- amount;
+            double updatedBalance = currentBalance- amount;
             updateBalance(updatedBalance);
-            System.out.println("Transction Successfull");
+            System.out.println("Transaction Successful");
         }else{
-            System.out.println("Insufficient Funds");
+            System.out.println("Overdraft Limit Exceeded");
         }
+    }
+
+    public void printDetails(){
+        System.out.println("Account Number: " + getAccountNumber());
+        System.out.println("Account Holder: " + getAccountHolderName());
+        System.out.println("Balance: " + getBalance());
+        System.out.println("Overdraft Limit: " + overdraftLimit);
+        System.out.println("Type: Current Account");
+
     }
 }
